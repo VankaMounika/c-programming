@@ -1,14 +1,12 @@
-bool subtractProductAndSum = function(n) {
-    int sum = 0;
-    int product = 1;
-
-    while (n > 0) {
-        int digit = n % 10;
-        sum += digit;
-        product *= digit;
-
-        n = Math.floor(n / 10);
+int subtractProductAndSum(int n)
+{
+ int product=1,sum=0,rem;
+    while(n>0)
+    {
+        rem=n%10;
+        product=product*rem;
+        sum=sum+rem;
+        n=n/10;
     }
-
-    return product - sum;
-};
+    return product-sum;
+}
