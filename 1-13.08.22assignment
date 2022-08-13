@@ -1,0 +1,27 @@
+1. #include<stdio.h>
+ void main()
+ {
+ int n,i,j;
+ printf("Enter n value:");
+ scanf("%d",&n);
+ char ch='A', ch1='a';
+ for(i=1;i<=n;i++)
+ {
+     for(j=1;j<=i;j++)
+    {
+      printf("%c%c\t ",ch,ch1);
+      ch++;
+      ch1++;
+    }
+    printf("\n");
+ }
+}
+Test Case:1
+input:
+Enter n value:5
+output:
+Aa	 
+Bb	 Cc	 
+Dd	 Ee	 Ff	 
+Gg	 Hh	 Ii	 Jj	 
+Kk	 Ll	 Mm	 Nn	 Oo
