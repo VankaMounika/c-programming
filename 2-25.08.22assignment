@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <string.h>
+void main()
+{
+    char s[100];
+    int i;
+    printf("Enter the string:");
+    gets(s);
+    for (i=0;s[i]!='\0';i++)
+    {
+        if(i%2==0)
+            s[i]=s[i]+32;        
+        else
+            s[i]=s[i]-32;
+    }
+     puts(s);
+}
