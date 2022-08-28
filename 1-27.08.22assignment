@@ -1,0 +1,55 @@
+#include <stdio.h>
+#include <string.h>
+int main ()
+{
+   char s1[20],s2[20];
+   char temp;
+   int i,j,n,n1,count=0;
+   printf("enter two strings:\n");
+   gets(s1);
+   gets(s2);
+   n=strlen(s1);
+   n1=strlen(s2);
+   for (i=0;i<n-1;i++)
+   {
+      for (j=i+1;j<n;j++)
+      {
+         if (s1[i] > s1[j])
+         {
+            temp  = s1[i];
+            s1[i] = s1[j];
+            s1[j] = temp;
+         }
+         if (s2[i] > s2[j]) 
+         {
+            temp  = s2[i];
+            s2[i] = s2[j];
+            s2[j] = temp;
+         }
+      }
+   }
+   for(i=0;s1[i]!='\0';i++) 
+   {
+      if(s1[i]=s2[i]) 
+      {    
+          count++;
+      }
+   }
+   if(count==n)
+   {
+    printf("anagram");
+   }
+   else
+    {
+      printf("not anagram");
+    }
+       return 0;
+}
+
+
+Output:
+
+enter two strings: 
+b e l o w
+b e l o w
+anagrams
