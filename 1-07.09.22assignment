@@ -1,0 +1,30 @@
+#include <stdio.h>
+int fib(int n)
+{
+    if(n==1||n==0)
+       return(n);
+    else
+       return(fib(n-1)+fib(n-2));
+}
+int main() {
+    int i,num,flag=0;
+    scanf("%d",&num);
+    for(i=0;i<10;i++)
+    {
+        if(num==fib(i))
+        {
+            flag=1;
+            break;
+        }
+    }
+    if(flag==1)
+        printf("Yes");
+    else
+        printf("No");
+    return 0;
+}
+
+Output:
+
+5
+Yes
