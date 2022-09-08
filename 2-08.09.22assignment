@@ -1,0 +1,40 @@
+#include<stdio.h>
+#include <malloc.h>
+ 
+void main()
+{
+	int i, n, sum = 0;
+	int *a;
+ 
+     	printf("Enter the size of array A \n");
+	scanf("%d", &n);
+ 
+        a = (int *) malloc(n * sizeof(int));
+ 
+        printf("Enter Elements of the List \n");
+	for (i = 0; i < n; i++) 
+        {
+		scanf("%d", a + i);
+	}
+        for (i = 0; i < n; i++)
+        {
+		sum = sum + *(a + i); 
+               
+	}
+ 
+        printf("Sum of all elements in array = %d\n", sum);
+        return 0;
+}
+
+Output:
+
+Enter the size of array A
+5
+Enter Elements of the List
+4
+9
+10
+56
+100
+Sum of all elements in array=179
+
